@@ -1,0 +1,13 @@
+GET http://localhost:3000/wazs
+
+###
+GET http://localhost:3000/wazs/1
+
+###
+POST  http://localhost:3000/wazs
+
+###
+PATCH  http://localhost:3000/wazs/1
+
+###
+DELETE   http://localhost:3000/wazs/1
