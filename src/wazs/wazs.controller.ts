@@ -1,10 +1,13 @@
-import { Controller, Delete, Get, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Patch, Post } from '@nestjs/common';
+import { WazsService } from './wazs.service';
+import { CreateWazDTO } from './dtos/create-waz-dto';
 
 @Controller('wazs')
 export class WazsController {
+  constructor(private wazsService: WazsService) {}
   @Get()
-  findAll(): string {
-    return 'get all the wazs';
+  findAll(): string[] {
+    return this.wazsService.findAll();
   }
 
   @Get(':id')
@@ -13,8 +16,8 @@ export class WazsController {
   }
 
   @Post()
-  create(): string {
-    return 'Create a waz';
+  create(@Body() createWazDTO: CreateWazDTO): string[] {
+    return this.wazsService.create(createWazDTO);
   }
 
   @Patch(':id')

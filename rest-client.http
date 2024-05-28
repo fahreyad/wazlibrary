@@ -5,7 +5,12 @@ GET http://localhost:3000/wazs/1
 
 ###
 POST  http://localhost:3000/wazs
+Content-Type: application/json
 
+{
+    "releaseDate": "2024-05-20",
+    "duration": "02.15"
+}
 ###
 PATCH  http://localhost:3000/wazs/1
 
