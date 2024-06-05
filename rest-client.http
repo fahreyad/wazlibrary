@@ -16,3 +16,24 @@ PATCH  http://localhost:3000/wazs/1
 
 ###
 DELETE   http://localhost:3000/wazs/1
+
+###
+GET http://localhost:3000/artists
+
+###
+GET http://localhost:3000/artists/1
+
+###
+POST  http://localhost:3000/artists
+Content-Type: application/json
+
+{
+    "id":5,
+    "name": "fahreyad ome new",
+    "bio": "lorum ipsum"
+}
+###
+PATCH  http://localhost:3000/artists/1
+
+###
+DELETE   http://localhost:3000/artists/1

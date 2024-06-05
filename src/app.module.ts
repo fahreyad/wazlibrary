@@ -3,9 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { WazsModule } from './wazs/wazs.module';
 import { LoggerMiddleware } from './middleware/logger.middleware';
+import { ArtistsModule } from './artists/artists.module';
 
 @Module({
-  imports: [WazsModule],
+  imports: [WazsModule, ArtistsModule],
   controllers: [AppController],
   providers: [AppService],
 })
