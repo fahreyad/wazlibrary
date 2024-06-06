@@ -28,8 +28,7 @@ POST  http://localhost:3000/artists
 Content-Type: application/json
 
 {
-    "id":5,
-    "name": "fahreyad ome new",
+    "name": "ttasdast",
     "bio": "lorum ipsum"
 }
 ###
