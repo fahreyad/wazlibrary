@@ -14,7 +14,10 @@ export class ArtistsService {
   ) {}
 
   findAll(): Promise<IArtist[]> {
-    return this.artistRepository.find();
+    return this.artistRepository
+      .createQueryBuilder('artist')
+      .where('artists.id IS NOT NULL')
+      .getMany();
   }
 
   findOne(id: number): Promise<IArtist> {

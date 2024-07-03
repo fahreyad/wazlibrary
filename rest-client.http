@@ -32,7 +32,12 @@ Content-Type: application/json
     "bio": "lorum ipsum"
 }
 ###
-PATCH  http://localhost:3000/artists/1
+PUT  http://localhost:3000/artists/1
+Content-Type: application/json
 
+{
+    "name": "",
+    "bio": "lorum ipsum"
+}
 ###
 DELETE   http://localhost:3000/artists/1
